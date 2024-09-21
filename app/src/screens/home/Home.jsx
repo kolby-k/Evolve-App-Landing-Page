@@ -1,49 +1,53 @@
 // Home.js
 import React from "react";
 import HeroSection from "./components/HeroSection";
-import WorkoutTrackingFeature from "./components/WorkoutTrackingFeature";
+import FeatureSection from "../../components/FeatureSection";
+import DownloadAppSection from "./components/DownloadAppSection";
 
 function Home() {
   return (
-    <div className="flex flex-col w-full text-slate-100 justify-evenly space-y-8 pb-10 overflow-auto">
+    <div className="flex flex-col w-full text-gray-100 space-y-16 ">
+      {/* Hero Section */}
       <HeroSection />
 
-      {/* Target Section with ID "get-started" */}
-      <div
-        id="learn-more"
-        className="flex self-center rounded-md shadow-md w-1/2 h-screen items-center"
-      >
-        <WorkoutTrackingFeature />
-      </div>
+      {/* Feature Sections */}
+      <div className="flex h-12 border-b border-b-slate-600 w-1/3 self-center"></div>
 
-      {/* Other Sections */}
-      <div className="bg-white p-6 sm:p-8 rounded-md shadow-md w-full max-w-full sm:max-w-3xl">
-        <h2 className="text-slate-900 font-semibold text-lg sm:text-xl text-center sm:text-left">
-          Explore a vast library of exercises. / Save your favorite exercises
-          for easy access.
-        </h2>
-      </div>
+      <FeatureSection
+        title="Real-Time Workout Tracking"
+        description="Track every set and rep in real-time and analyze past performance."
+        icon="⏱️"
+        videoSrc="/videos/tracking-demo.mp4"
+      />
 
-      <div className="bg-white p-6 sm:p-8 rounded-md shadow-md w-full max-w-full sm:max-w-3xl">
-        <h2 className="text-slate-900 font-semibold text-lg sm:text-xl text-center sm:text-left">
-          Stay motivated with detailed progress reports. / Easily review past
-          workouts with the calendar view.
-        </h2>
-      </div>
+      <div className="flex h-12 border-b border-b-slate-600 w-4/5 self-center"></div>
 
-      <div className="bg-white p-6 sm:p-8 rounded-md shadow-md w-full max-w-full sm:max-w-3xl">
-        <h2 className="text-slate-900 font-semibold text-lg sm:text-xl text-center sm:text-left">
-          Easily start new workouts or choose from templates. / Build
-          personalized workout plans.
-        </h2>
-      </div>
+      <FeatureSection
+        title="Explore a Vast Library of Exercises"
+        description="Save your favorite exercises for easy access."
+        icon="📚"
+        videoSrc="/videos/exercise-search-demo.mp4"
+      />
 
-      <div className="bg-white p-6 sm:p-8 rounded-md shadow-md w-full max-w-full sm:max-w-3xl">
-        <h2 className="text-slate-900 font-semibold text-lg sm:text-xl text-center sm:text-left">
-          Track every set and rep in real-time. / Dive deep into past workout
-          performance.
-        </h2>
-      </div>
+      <div className="flex h-12 border-b border-b-slate-600 w-4/5 self-center"></div>
+
+      <FeatureSection
+        title="Stay Motivated with Analytics & Insights"
+        description="Stay ontop of your past performance to consistently make gains."
+        icon="📊"
+        videoSrc="/videos/exercise-chart-demo.mp4"
+      />
+
+      <div className="flex h-12 border-b border-b-slate-600 w-4/5 self-center"></div>
+
+      <FeatureSection
+        title="View Your Workout History"
+        description="Easily review past workouts with the calendar view."
+        icon="📝"
+        videoSrc="/videos/workout-history-demo.mp4"
+      />
+
+      <DownloadAppSection />
     </div>
   );
 }

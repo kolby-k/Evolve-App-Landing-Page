@@ -6,7 +6,7 @@ import { FaChevronDown } from "react-icons/fa";
 function HeroSection() {
   return (
     <section
-      className="bg-cover bg-center h-[80vh] relative"
+      className="bg-cover bg-center h-[100vh] relative"
       style={{
         backgroundImage:
           "url(https://images.pexels.com/photos/949126/pexels-photo-949126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",

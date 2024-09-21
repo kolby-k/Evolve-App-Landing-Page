@@ -1,5 +1,3 @@
-// src/components/Header.jsx
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -21,9 +19,15 @@ function Header() {
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-slate-300">
-                Contact
-              </Link>
+              {/* Use an external link for the App Store */}
+              <a
+                href="https://apps.apple.com/app/your-app-id"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-slate-300"
+              >
+                Download
+              </a>
             </li>
           </ul>
         </nav>
